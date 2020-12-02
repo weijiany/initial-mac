@@ -1,0 +1,7 @@
+---
+# tasks file for homebrew
+- name: install cask package
+  include_tasks: install_cask.yml
+  vars:
+    name: '{{ item }}'
+  loop: '{{ cask_list }}'

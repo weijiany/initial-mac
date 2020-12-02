@@ -1,0 +1,16 @@
+---
+# vars file for homebrew
+cask_list:
+  - iterm2
+  - lastpass
+  - clipy
+  - shiftit
+  - eudic
+  - qqmusic
+  - visual-studio-code
+  - zoom
+  - docker
+  - intellij-idea
+
+# the value should pass from --extra-vars
+sudo_password: ''
