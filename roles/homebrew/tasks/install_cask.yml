@@ -4,4 +4,3 @@
     name: '{{ name }}'
     state: present
     sudo_password: '{{ sudo_password }}'
-    update_homebrew: yes
