@@ -2,3 +2,4 @@
 - hosts: local
   roles:
     - role: homebrew
+    - role: oh_my_zsh

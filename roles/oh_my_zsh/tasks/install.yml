@@ -1,0 +1,19 @@
+---
+- name: oh my zsh is install
+  stat:
+    path: '{{ ansible_env.HOME }}/.oh-my-zsh'
+  register: is_installed
+
+- name: install oh my zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  when: not is_installed.stat.exists
+
+- name: replace .zshrc file
+  template:
+    src: zshrc-template.j2
+    dest: '{{ ansible_env.HOME }}/.zshrc'
+
+- name: replace .vimrc file
+  template:
+    src: vimrc-template.j2
+    dest: '{{ ansible_env.HOME }}/.vimrc'

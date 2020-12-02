@@ -17,8 +17,9 @@ cli_list:
   - jenv
   - nvm
   - autojump
-  - zsh-autosuggestions
   - kubectl
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
 
 # the value should pass from --extra-vars
 sudo_password: ''

@@ -25,13 +25,11 @@
         name: origin
         url: https://mirrors.ustc.edu.cn/homebrew-cask.git
 
-- name: install cask package
-  include_tasks: install_cask.yml
+- include_tasks: install_cask.yml
   vars:
     name: '{{ cask_list }}'
 
-- name: install cli package
-  include_tasks: install_cli.yml
+- include_tasks: install_cli.yml
   vars:
     name: '{{ cli_list }}'
 
