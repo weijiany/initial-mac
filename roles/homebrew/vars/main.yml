@@ -11,6 +11,7 @@ cask_list:
   - zoom
   - docker
   - intellij-idea
+  - sogouinput
 
 cli_list:
   - warrensbox/tap/tfswitch
