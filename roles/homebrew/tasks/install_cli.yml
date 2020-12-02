@@ -1,0 +1,5 @@
+---
+- name: 'install {{ name }}'
+  homebrew:
+    name: '{{ name }}'
+    state: present

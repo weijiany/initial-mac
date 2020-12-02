@@ -12,5 +12,13 @@ cask_list:
   - docker
   - intellij-idea
 
+cli_list:
+  - warrensbox/tap/tfswitch
+  - jenv
+  - nvm
+  - autojump
+  - zsh-autosuggestions
+  - kubectl
+
 # the value should pass from --extra-vars
 sudo_password: ''
