@@ -8,10 +8,13 @@
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not is_installed.stat.exists
 
+- set_fact: "old_zshrc_conent={{ lookup('file', ansible_env.HOME + '/.zshrc') }}"
+
 - name: replace .zshrc file
   template:
     src: zshrc-template.j2
     dest: '{{ ansible_env.HOME }}/.zshrc'
+  when: '"gnzh" not in old_zshrc_conent'
 
 - name: replace .vimrc file
   template:

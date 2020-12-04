@@ -103,29 +103,47 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias typora='open -a Typora'
 alias rider='open -a Rider'
+alias idea='open -a IntelliJ\ IDEA'
 alias ideace='open -a IntelliJ\ IDEA\ CE'
 alias webstorm='open -a WebStorm'
 alias pycharmce='open -a PyCharm\ CE'
 
+# -------------------------------------------------------------------
 # zsh-syntax-hightlighting
+# -------------------------------------------------------------------
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# -------------------------------------------------------------------
 # zsh-autosuggestions
+# -------------------------------------------------------------------
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# dotnet tools
+# -------------------------------------------------------------------
+# dotnet core tools
+# -------------------------------------------------------------------
 export PATH=$PATH:~/.dotnet/tools:~/bin
 
+# -------------------------------------------------------------------
 # yarn path
+# -------------------------------------------------------------------
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# -------------------------------------------------------------------
 # nvm config
+# -------------------------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# -------------------------------------------------------------------
 # jenv config
+# -------------------------------------------------------------------
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+# java home, maybe need to change for your self
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/'
 
+# -------------------------------------------------------------------
 # homebrew sbin
+# -------------------------------------------------------------------
 export PATH="/usr/local/sbin:$PATH"

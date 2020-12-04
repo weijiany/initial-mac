@@ -12,6 +12,7 @@ cask_list:
   - docker
   - intellij-idea
   - sogouinput
+  - postman
 
 cli_list:
   - warrensbox/tap/tfswitch

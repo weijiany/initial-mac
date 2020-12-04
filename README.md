@@ -25,6 +25,7 @@ cask：
 - docker
 - intellij-idea
 - sogouinput
+- postman
 
 cli package：
 
