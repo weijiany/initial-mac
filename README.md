@@ -41,3 +41,7 @@ cli package：
 
 - cask: roles/homebrew/vars/main.yml > cask_list
 - cli: roles/homebrew/vars/main.yml > cli_list
+
+### git
+
+配置 git alias.l = "log --graph --decorate --oneline"

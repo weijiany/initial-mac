@@ -1,0 +1,6 @@
+---
+# tasks file for git
+- git_config:
+    name: alias.l
+    scope: global
+    value: 'log --graph --decorate --oneline'
