@@ -28,6 +28,10 @@ cask：
 - postman
 - dbeaver-community
 
+dbeaver-community 需要配置 java 环境：
+
+修改 `/Applications/DBeaver.app/Contents/Info.plist` Eclipse > array
+
 cli package：
 
 - warrensbox/tap/tfswitch(terraform 版本管理工具 https://github.com/warrensbox/terraform-switcher)
