@@ -26,6 +26,7 @@ cask：
 - intellij-idea
 - sogouinput
 - postman
+- dbeaver-community
 
 cli package：
 

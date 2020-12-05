@@ -13,6 +13,7 @@ cask_list:
   - intellij-idea
   - sogouinput
   - postman
+  - dbeaver-community
 
 cli_list:
   - warrensbox/tap/tfswitch
