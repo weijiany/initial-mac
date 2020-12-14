@@ -23,6 +23,7 @@ cli_list:
   - kubectl
   - zsh-autosuggestions
   - zsh-syntax-highlighting
+  - git-gui
 
 # the value should pass from --extra-vars
 sudo_password: ''

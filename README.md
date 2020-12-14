@@ -41,6 +41,7 @@ cli package：
 - kubectl(kubernetes 命令行工具 https://github.com/kubernetes/kubectl)
 - zsh-autosuggestions(oh-my-zsh 自动提示插件 https://github.com/zsh-users/zsh-autosuggestions)
 - zsh-syntax-highlighting(oh-my-zsh 高亮工具 https://github.com/zsh-users/zsh-syntax-highlighting)
+- git-gui(gitk 图形化界面)
 
 如果上述软件不能满足需要，并且还想用 homebrew 安装，可以在下列两个数组中继续添加：
 
