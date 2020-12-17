@@ -5,7 +5,7 @@
 怎么运行：
 
 ```
-make run SUDO_PASSWORD='{your sudo password}'
+./run.sh '{you sudo password}'
 ```
 
 在安装 cask 的时候，有些软件需要 sudo 的密码。
