@@ -50,4 +50,4 @@ cli package：
 
 ### git
 
-配置 git alias.l = "log --graph --decorate --oneline"
+配置 git alias.l = "log --graph --date=format:'%Y-%m-%d' --pretty=format:'%C(cyan)%h%Creset %Creset%C(auto)%d %s %C(black bold)(%ad) %C(bold blue)<%an>'"
