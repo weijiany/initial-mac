@@ -24,6 +24,7 @@ cli_list:
   - zsh-autosuggestions
   - zsh-syntax-highlighting
   - git-gui
+  - watch
 
 # the value should pass from --extra-vars
 sudo_password: ''
