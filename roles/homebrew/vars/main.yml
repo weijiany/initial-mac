@@ -25,6 +25,7 @@ cli_list:
   - zsh-syntax-highlighting
   - git-gui
   - watch
+  - wget
 
 # the value should pass from --extra-vars
 sudo_password: ''
