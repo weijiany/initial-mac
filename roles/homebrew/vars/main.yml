@@ -26,6 +26,7 @@ cli_list:
   - git-gui
   - watch
   - wget
+  - graphviz
 
 # the value should pass from --extra-vars
 sudo_password: ''
