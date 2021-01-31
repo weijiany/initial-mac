@@ -38,8 +38,8 @@ source venv/bin/activate
 
 # install python dependency
 myEcho '====install python dependency====' ${yello}
-pip3 install --upgrade pip
-pip3 install -r requirement.txt
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirement.txt
 
 # run ansible-playbook
 myEcho '====run ansible playbook' ${yello}
