@@ -28,6 +28,8 @@ cli_list:
   - wget
   - graphviz
   - tmpwatch
+  - jq
+  - yq
 
 # the value should pass from --extra-vars
 sudo_password: ''
