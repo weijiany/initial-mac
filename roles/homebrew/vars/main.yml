@@ -30,6 +30,7 @@ cli_list:
   - tmpwatch
   - jq
   - yq
+  - tmux
 
 # the value should pass from --extra-vars
 sudo_password: ''
