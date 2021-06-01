@@ -18,7 +18,6 @@ cask：
 - lastpass
 - clipy(剪切板工具 https://github.com/Clipy/Clipy)
 - shiftit(窗口管理工具 https://github.com/fikovnik/ShiftIt)
-- eudic(翻译软件 https://www.eudic.net/v4/en/app/eudic)
 - qqmusic
 - visual-studio-code
 - zoom
