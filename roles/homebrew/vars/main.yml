@@ -6,6 +6,7 @@ cask_list:
   - clipy
   - shiftit
   - qqmusic
+  - qq
   - visual-studio-code
   - zoom
   - docker
@@ -13,6 +14,14 @@ cask_list:
   - sogouinput
   - postman
   - dbeaver-community
+  - ticktick
+  - wechat
+  - wechatwork
+  - adoptopenjdk
+  - ccleaner
+  - figma
+  - slack
+  - typora
 
 cli_list:
   - warrensbox/tap/tfswitch
@@ -30,6 +39,10 @@ cli_list:
   - jq
   - yq
   - tmux
+  - go
+  - k9s
+  - tree
+  - expect
 
 # the value should pass from --extra-vars
 sudo_password: ''
