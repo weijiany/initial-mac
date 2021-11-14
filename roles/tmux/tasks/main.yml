@@ -9,3 +9,6 @@
     src: tmux-config-template.j2
     dest: '{{ ansible_env.HOME }}/.tmux.conf'
   when: not tmux_conf.stat.exists
+
+- name: install tmux plugins
+  command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/scripts/install_plugins.sh'
