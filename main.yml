@@ -4,3 +4,4 @@
     - role: homebrew
     - role: oh_my_zsh
     - role: git
+    - role: tmux

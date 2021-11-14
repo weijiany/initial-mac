@@ -1,2 +1,11 @@
 ---
-# tasks file for tmux
+- name: check the .tmux.conf exists
+  stat:
+    path: '{{ ansible_env.HOME }}/.tmux.conf'
+  register: tmux_conf
+
+- name: copy .tmux.conf
+  template:
+    src: tmux-config-template.j2
+    dest: '{{ ansible_env.HOME }}/.tmux.conf'
+  when: not tmux_conf.stat.exists

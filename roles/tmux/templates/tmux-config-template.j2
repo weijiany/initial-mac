@@ -1,0 +1,27 @@
+set -g @plugin 'dracula/tmux'
+# available plugins: battery, cpu-usage, git, gpu-usage, ram-usage, network, network-bandwidth, weather, time
+set -g @dracula-plugins "cpu-usage git time"
+
+set-window-option -g mode-keys vi
+set -g mouse on
+
+# split window
+bind | split-window -h
+bind - split-window -v
+
+# vim mode to select pane
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# use r key to reload tmux config.
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded.."
+
+# use h,j,k,l to adjust pane size
+bind -r ^k resizep -U 1
+bind -r ^j resizep -D 1
+bind -r ^h resizep -L 1
+bind -r ^l resizep -R 1
+
+run -b '~/.tmux/plugins/tpm/tpm'
