@@ -16,7 +16,13 @@
     dest: '{{ ansible_env.HOME }}/.zshrc'
   when: '"gnzh" not in old_zshrc_conent'
 
+- name: check the .vimrc exists
+  stat:
+    path: '{{ ansible_env.HOME }}/.vimrc'
+  register: vimrc
+
 - name: replace .vimrc file
   template:
     src: vimrc-template.j2
     dest: '{{ ansible_env.HOME }}/.vimrc'
+  when: not vimrc.stat.exists
