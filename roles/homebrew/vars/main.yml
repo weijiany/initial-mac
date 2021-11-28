@@ -22,6 +22,7 @@ cask_list:
   - figma
   - slack
   - typora
+  - google-chrome
 
 cli_list:
   - warrensbox/tap/tfswitch
@@ -43,6 +44,7 @@ cli_list:
   - k9s
   - tree
   - expect
+  - zsh
 
 # the value should pass from --extra-vars
 sudo_password: ''
