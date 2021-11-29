@@ -10,5 +10,13 @@
     dest: '{{ ansible_env.HOME }}/.tmux.conf'
   when: not tmux_conf.stat.exists
 
+- name: install tpm
+  ansible.builtin.git:
+    repo: 'https://github.com/tmux-plugins/tpm'
+    dest: '{{ ansible_env.HOME }}/.tmux/plugins/tpm'
+
+- name: source tmux config
+  command: 'tmux source {{ ansible_env.HOME }}/.tmux.conf'
+
 - name: install tmux plugins
   command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/scripts/install_plugins.sh'
