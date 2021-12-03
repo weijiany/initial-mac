@@ -46,6 +46,7 @@ cli_list:
   - zsh
   - openjdk@8
   - openjdk
+  - pip-tools
 
 # the value should pass from --extra-vars
 sudo_password: ''
