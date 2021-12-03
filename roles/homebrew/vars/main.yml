@@ -47,6 +47,7 @@ cli_list:
   - openjdk@8
   - openjdk
   - pip-tools
+  - tig
 
 # the value should pass from --extra-vars
 sudo_password: ''
