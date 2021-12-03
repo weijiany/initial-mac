@@ -17,7 +17,6 @@ cask_list:
   - ticktick
   - wechat
   - wechatwork
-  - adoptopenjdk
   - ccleaner
   - figma
   - slack
@@ -45,6 +44,8 @@ cli_list:
   - tree
   - expect
   - zsh
+  - openjdk@8
+  - openjdk
 
 # the value should pass from --extra-vars
 sudo_password: ''
