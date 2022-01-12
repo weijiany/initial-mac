@@ -9,7 +9,6 @@ cask_list:
   - qq
   - visual-studio-code
   - zoom
-  - docker
   - intellij-idea
   - sogouinput
   - postman
@@ -48,6 +47,9 @@ cli_list:
   - openjdk
   - pip-tools
   - tig
+  - colima
+  - docker
+  - docker-compose
 
 # the value should pass from --extra-vars
 sudo_password: ''
