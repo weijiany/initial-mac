@@ -21,6 +21,8 @@ cask_list:
   - slack
   - typora
   - google-chrome
+  - virtualbox
+  - vagrant
 
 cli_list:
   - warrensbox/tap/tfswitch
