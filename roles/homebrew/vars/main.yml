@@ -50,6 +50,7 @@ cli_list:
   - colima
   - docker
   - docker-compose
+  - gnu-sed
 
 # the value should pass from --extra-vars
 sudo_password: ''
