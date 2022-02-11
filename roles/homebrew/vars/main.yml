@@ -47,8 +47,6 @@ cli_list:
   - zsh
   - openjdk@8
   - openjdk
-  - pip-tools
-  - tig
   - colima
   - docker
   - docker-compose
