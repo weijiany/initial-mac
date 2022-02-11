@@ -1,3 +1,10 @@
+# be used to save and restore tmux session when machine restart
+# refer to: https://github.com/tmux-plugins/tmux-continuum.git
+set -g @plugin 'tmux-plugins/tmux-resurrect'                                                                                                                                                                           [0/921]
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '60'
+
 set -g @plugin 'dracula/tmux'
 # available plugins: battery, cpu-usage, git, gpu-usage, ram-usage, network, network-bandwidth, weather, time
 set -g @dracula-plugins "cpu-usage git time"
