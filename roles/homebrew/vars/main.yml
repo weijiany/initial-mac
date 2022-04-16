@@ -51,6 +51,7 @@ cli_list:
   - docker
   - docker-compose
   - gnu-sed
+  - pyenv
 
 # the value should pass from --extra-vars
 sudo_password: ''
