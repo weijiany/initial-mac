@@ -28,13 +28,13 @@ fi
 # create virtual env for python
 myEcho '====check venv is already exist' ${yello}
 if [ ! -d venv ]; then
-    python3 -m venv venv
+    python3 -m venv .venv
 else
     myEcho '--->venv exist' ${green}
 fi
 
 # activate virtual env
-source venv/bin/activate
+source .venv/bin/activate
 
 # install python dependency
 myEcho '====install python dependency====' ${yello}

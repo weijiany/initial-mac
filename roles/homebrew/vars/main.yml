@@ -3,26 +3,21 @@
 cask_list:
   - iterm2
   - lastpass
-  - clipy
-  - shiftit
   - qqmusic
-  - qq
   - visual-studio-code
   - zoom
   - intellij-idea
   - sogouinput
   - postman
-  - dbeaver-community
   - ticktick
   - wechat
   - wechatwork
   - ccleaner
-  - figma
   - slack
-  - typora
   - google-chrome
   - virtualbox
   - vagrant
+  - raycast
 
 cli_list:
   - warrensbox/tap/tfswitch
@@ -32,7 +27,6 @@ cli_list:
   - kubectl
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-  - git-gui
   - watch
   - wget
   - graphviz
@@ -41,11 +35,9 @@ cli_list:
   - yq
   - tmux
   - go
-  - k9s
   - tree
   - expect
   - zsh
-  - openjdk@8
   - openjdk
   - colima
   - docker

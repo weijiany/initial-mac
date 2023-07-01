@@ -16,20 +16,21 @@ cask：
 
 - iterm2
 - lastpass
-- clipy(剪切板工具 https://github.com/Clipy/Clipy)
-- shiftit(窗口管理工具 https://github.com/fikovnik/ShiftIt)
 - qqmusic
 - visual-studio-code
 - zoom
-- docker
 - intellij-idea
 - sogouinput
 - postman
-- dbeaver-community
-
-dbeaver-community 需要配置 java 环境：
-
-修改 `/Applications/DBeaver.app/Contents/Info.plist` Eclipse > array
+- ticktick
+- wechat
+- wechatwork
+- ccleaner
+- slack
+- google-chrome
+- virtualbox
+- vagrant
+- raycast
 
 cli package：
 
@@ -40,13 +41,23 @@ cli package：
 - kubectl(kubernetes 命令行工具 https://github.com/kubernetes/kubectl)
 - zsh-autosuggestions(oh-my-zsh 自动提示插件 https://github.com/zsh-users/zsh-autosuggestions)
 - zsh-syntax-highlighting(oh-my-zsh 高亮工具 https://github.com/zsh-users/zsh-syntax-highlighting)
-- git-gui(gitk 图形化界面)
 - watch
 - wget
 - graphviz
 - tmpwatch
 - jq
 - yq
+- tmux
+- go
+- tree
+- expect
+- zsh
+- openjdk
+- colima
+- docker
+- docker-compose
+- gnu-sed
+- pyenv
 
 如果上述软件不能满足需要，并且还想用 homebrew 安装，可以在下列两个数组中继续添加：
 
