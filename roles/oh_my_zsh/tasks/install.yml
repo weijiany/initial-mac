@@ -8,13 +8,22 @@
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not is_installed.stat.exists
 
+- name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
+  ansible.builtin.include_vars:
+    file: ../../homebrew/vars/main.yml
+    name: homebrew
+
+- set_fact: "installed_brew_packages={{ homebrew.cask_list + homebrew.cli_list }}"
+
 - set_fact: "old_zshrc_conent={{ lookup('file', ansible_env.HOME + '/.zshrc') }}"
 
 - name: replace .zshrc file
-  template:
+  ansible.builtin.template:
     src: zshrc-template.j2
     dest: '{{ ansible_env.HOME }}/.zshrc'
   when: '"gnzh" not in old_zshrc_conent'
+  vars:
+    installed_brew_packages: "{{ installed_brew_packages }}"
 
 - name: check the .vimrc exists
   stat:

@@ -70,8 +70,12 @@ ZSH_THEME="gnzh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	{% if 'kubectl' in installed_brew_packages %}
 	kubectl
+	{% endif %}
+	{% if 'autojump' in installed_brew_packages %}
 	autojump
+	{% endif %}
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -101,33 +105,30 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias typora='open -a Typora'
-alias rider='open -a Rider'
+{% if 'intellij-idea' in installed_brew_packages %}
 alias idea='open -a IntelliJ\ IDEA'
-alias ideace='open -a IntelliJ\ IDEA\ CE'
-alias webstorm='open -a WebStorm'
-alias pycharmce='open -a PyCharm\ CE'
+{% endif %}
 
+{% if 'zsh-syntax-highlighting' in installed_brew_packages %}
 # -------------------------------------------------------------------
-# zsh-syntax-hightlighting
+# zsh-syntax-highlighting
 # -------------------------------------------------------------------
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{% endif %}
 
+{% if 'zsh-autosuggestions' in installed_brew_packages %}
 # -------------------------------------------------------------------
 # zsh-autosuggestions
 # -------------------------------------------------------------------
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+{% endif %}
 
 # -------------------------------------------------------------------
 # dotnet core tools
 # -------------------------------------------------------------------
 export PATH=$PATH:~/.dotnet/tools:~/bin
 
-# -------------------------------------------------------------------
-# yarn path
-# -------------------------------------------------------------------
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
+{% if 'nvm' in installed_brew_packages %}
 # -------------------------------------------------------------------
 # nvm config
 # -------------------------------------------------------------------
@@ -136,12 +137,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # -------------------------------------------------------------------
+# yarn path
+# -------------------------------------------------------------------
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+{% endif %}
+
+{% if 'jenv' in installed_brew_packages %}
+# -------------------------------------------------------------------
 # jenv config
 # -------------------------------------------------------------------
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-# java home, maybe need to change for your self
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/'
+{% endif %}
 
 # -------------------------------------------------------------------
 # homebrew sbin
@@ -153,29 +160,37 @@ export PATH="/usr/local/sbin:$PATH"
 # -------------------------------------------------------------------
 export GPG_TTY=$(tty)
 
+{% if 'tmux' in installed_brew_packages %}
 # -------------------------------------------------------------------
 # autosuggestions highlight not working in tmux
 # -------------------------------------------------------------------
 export TERM=xterm-256color
+{% endif %}
 
+{% if 'gnu-sed' in installed_brew_packages %}
 # -------------------------------------------------------------------
 # gnubin
 # -------------------------------------------------------------------
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+{% endif %}
 
+{% if 'pyenv' in installed_brew_packages %}
 # -------------------------------------------------------------------
 # pyenv
 # -------------------------------------------------------------------
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
+{% endif %}
 
 # -------------------------------------------------------------------
 # openssl@3
 # -------------------------------------------------------------------
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 
+{% if 'go' in installed_brew_packages %}
 # ------------------------------------------------------------------
 # golang
 # ------------------------------------------------------------------
 export PATH="/Users/weijian/go/bin:$PATH"
+{% endif %}
