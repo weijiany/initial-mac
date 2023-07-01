@@ -1,6 +1,6 @@
 ---
 - name: 'install {{ name }}'
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: '{{ name }}'
     state: present
     sudo_password: '{{ sudo_password }}'

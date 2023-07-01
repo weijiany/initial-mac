@@ -1,11 +1,11 @@
 ---
 # tasks file for homebrew
 - name: save homebrew repo directory
-  command: brew --repo
+  ansible.builtin.command: brew --repo
   register: homebrew_repo_dir
 
 - name: change homebrew repo source to tsinghua
-  include_tasks: change_remote_url.yml
+  ansible.builtin.include_tasks: change_remote_url.yml
   vars:
     directory: '{{ item.directory }}'
     remote:
@@ -25,16 +25,16 @@
         name: origin
         url: https://mirrors.ustc.edu.cn/homebrew-cask.git
 
-- include_tasks: install_cask.yml
+- ansible.builtin.include_tasks: install_cask.yml
   vars:
     name: '{{ cask_list }}'
 
-- include_tasks: install_cli.yml
+- ansible.builtin.include_tasks: install_cli.yml
   vars:
     name: '{{ cli_list }}'
 
 - name: change homebrew repo source to github
-  include_tasks: change_remote_url.yml
+  ansible.builtin.include_tasks: change_remote_url.yml
   vars:
     directory: '{{ item.directory }}'
     remote:

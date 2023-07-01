@@ -1,5 +1,5 @@
 ---
 - name: 'install {{ name }}'
-  homebrew:
+  community.general.homebrew:
     name: '{{ name }}'
     state: present

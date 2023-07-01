@@ -1,11 +1,11 @@
 ---
 - name: check the .tmux.conf exists
-  stat:
+  ansible.builtin.stat:
     path: '{{ ansible_env.HOME }}/.tmux.conf'
   register: tmux_conf
 
 - name: copy .tmux.conf
-  template:
+  ansible.builtin.template:
     src: tmux-config-template.j2
     dest: '{{ ansible_env.HOME }}/.tmux.conf'
   when: not tmux_conf.stat.exists
@@ -16,7 +16,7 @@
     dest: '{{ ansible_env.HOME }}/.tmux/plugins/tpm'
 
 - name: source tmux config
-  command: 'tmux source {{ ansible_env.HOME }}/.tmux.conf'
+  ansible.builtin.command: 'tmux source {{ ansible_env.HOME }}/.tmux.conf'
 
 - name: install tmux plugins
-  command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/scripts/install_plugins.sh'
+  ansible.builtin.command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/scripts/install_plugins.sh'

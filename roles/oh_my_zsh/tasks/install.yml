@@ -1,11 +1,11 @@
 ---
 - name: oh my zsh is install
-  stat:
+  ansible.builtin.stat:
     path: '{{ ansible_env.HOME }}/.oh-my-zsh'
   register: is_installed
 
 - name: install oh my zsh
-  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not is_installed.stat.exists
 
 - name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
@@ -13,9 +13,9 @@
     file: ../../homebrew/vars/main.yml
     name: homebrew
 
-- set_fact: "installed_brew_packages={{ homebrew.cask_list + homebrew.cli_list }}"
+- ansible.builtin.set_fact: "installed_brew_packages={{ homebrew.cask_list + homebrew.cli_list }}"
 
-- set_fact: "old_zshrc_conent={{ lookup('file', ansible_env.HOME + '/.zshrc') }}"
+- ansible.builtin.set_fact: "old_zshrc_conent={{ lookup('file', ansible_env.HOME + '/.zshrc') }}"
 
 - name: replace .zshrc file
   ansible.builtin.template:
@@ -26,12 +26,12 @@
     installed_brew_packages: "{{ installed_brew_packages }}"
 
 - name: check the .vimrc exists
-  stat:
+  ansible.builtin.stat:
     path: '{{ ansible_env.HOME }}/.vimrc'
   register: vimrc
 
 - name: replace .vimrc file
-  template:
+  ansible.builtin.template:
     src: vimrc-template.j2
     dest: '{{ ansible_env.HOME }}/.vimrc'
   when: not vimrc.stat.exists

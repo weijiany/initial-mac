@@ -1,5 +1,5 @@
 ---
 - name: 'change remote {{ remote.name }} url of {{ directory }}'
-  shell: |
+  ansible.builtin.shell: |
     cd "{{ directory }}"
     git remote set-url "{{ remote.name }}" "{{ remote.url }}"
