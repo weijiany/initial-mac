@@ -6,6 +6,12 @@
     scope: global
     value: "log --graph --date=format:'%Y-%m-%d' --pretty=format:'%C(cyan)%h%Creset %Creset%C(auto)%d %s %C(black bold)(%ad) %C(bold blue)<%an>'"
 
+- name: support escape symbol
+  community.general.git_config:
+    name: core.paper
+    scope: global
+    value: "less -r"
+
 - ansible.builtin.set_fact: "ignore_file_path={{ ansible_env.HOME }}/.gitignore_global"
 
 - name: cp ignore file
