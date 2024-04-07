@@ -114,14 +114,14 @@ alias idea='open -a IntelliJ\ IDEA'
 # -------------------------------------------------------------------
 # zsh-syntax-highlighting
 # -------------------------------------------------------------------
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 {% endif %}
 
 {% if 'zsh-autosuggestions' in installed_brew_packages %}
 # -------------------------------------------------------------------
 # zsh-autosuggestions
 # -------------------------------------------------------------------
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 {% endif %}
 
 # -------------------------------------------------------------------
@@ -134,8 +134,8 @@ export PATH=$PATH:~/.dotnet/tools:~/bin
 # nvm config
 # -------------------------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # -------------------------------------------------------------------
 # yarn path
@@ -195,3 +195,8 @@ export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 # ------------------------------------------------------------------
 export PATH="/Users/weijian/go/bin:$PATH"
 {% endif %}
+
+# ------------------------------------------------------------------
+# less ignore case
+# ------------------------------------------------------------------
+export LESS="-i"
