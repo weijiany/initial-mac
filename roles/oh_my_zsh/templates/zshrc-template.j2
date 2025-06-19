@@ -125,33 +125,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 {% endif %}
 
 # -------------------------------------------------------------------
-# dotnet core tools
-# -------------------------------------------------------------------
-export PATH=$PATH:~/.dotnet/tools:~/bin
-
-{% if 'nvm' in installed_brew_packages %}
-# -------------------------------------------------------------------
-# nvm config
-# -------------------------------------------------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# -------------------------------------------------------------------
-# yarn path
-# -------------------------------------------------------------------
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-{% endif %}
-
-{% if 'jenv' in installed_brew_packages %}
-# -------------------------------------------------------------------
-# jenv config
-# -------------------------------------------------------------------
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-{% endif %}
-
-# -------------------------------------------------------------------
 # homebrew sbin
 # -------------------------------------------------------------------
 export PATH="/usr/local/sbin:$PATH"
@@ -173,15 +146,6 @@ export TERM=xterm-256color
 # gnubin
 # -------------------------------------------------------------------
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-{% endif %}
-
-{% if 'pyenv' in installed_brew_packages %}
-# -------------------------------------------------------------------
-# pyenv
-# -------------------------------------------------------------------
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
 {% endif %}
 
 # -------------------------------------------------------------------

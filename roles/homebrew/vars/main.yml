@@ -12,39 +12,27 @@ cask_list:
   - ticktick
   - wechat
   - wechatwork
-  - ccleaner
   - slack
   - google-chrome
-  - virtualbox
-  - vagrant
   - raycast
   - netnewswire
 
 cli_list:
-  - warrensbox/tap/tfswitch
-  - jenv
-  - nvm
   - autojump
-  - kubectl
   - zsh-autosuggestions
   - zsh-syntax-highlighting
   - watch
   - wget
   - graphviz
   - tmpwatch
-  - jq
   - yq
   - tmux
-  - go
   - tree
   - expect
   - zsh
-  - openjdk
-  - colima
   - docker
   - docker-compose
   - gnu-sed
-  - pyenv
 
 # the value should pass from --extra-vars
 sudo_password: ''

@@ -111,11 +111,8 @@ initial-mac/
 | [滴答清单](https://dida365.com/)                     | 任务管理工具   | `ticktick`           |
 | [微信](https://weixin.qq.com/)                       | 即时通讯工具   | `wechat`             |
 | [企业微信](https://work.weixin.qq.com/)              | 企业通讯工具   | `wechatwork`         |
-| [CCleaner](https://www.ccleaner.com/)                | 系统清理工具   | `ccleaner`           |
 | [Slack](https://slack.com/)                          | 团队协作工具   | `slack`              |
 | [Google Chrome](https://www.google.com/chrome/)      | 网页浏览器     | `google-chrome`      |
-| [VirtualBox](https://www.virtualbox.org/)            | 虚拟机软件     | `virtualbox`         |
-| [Vagrant](https://www.vagrantup.com/)                | 虚拟机管理工具 | `vagrant`            |
 | [Raycast](https://www.raycast.com/)                  | 快速启动工具   | `raycast`            |
 | [NetNewsWire](https://netnewswire.com/)              | RSS 阅读器     | `netnewswire`        |
 
@@ -123,30 +120,21 @@ initial-mac/
 
 | 工具                                                                            | 描述                   | Homebrew 包名             |
 | ------------------------------------------------------------------------------- | ---------------------- | ------------------------- |
-| [tfswitch](https://github.com/warrensbox/terraform-switcher)                    | Terraform 版本管理工具 | `warrensbox/tap/tfswitch` |
-| [jenv](https://github.com/jenv/jenv)                                            | Java 版本管理工具      | `jenv`                    |
-| [nvm](https://github.com/nvm-sh/nvm)                                            | Node.js 版本管理工具   | `nvm`                     |
 | [autojump](https://github.com/wting/autojump)                                   | 命令行强大的跳转工具   | `autojump`                |
-| [kubectl](https://github.com/kubernetes/kubectl)                                | Kubernetes 命令行工具  | `kubectl`                 |
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)         | Oh My Zsh 自动提示插件 | `zsh-autosuggestions`     |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Oh My Zsh 语法高亮工具 | `zsh-syntax-highlighting` |
 | [watch](https://man7.org/linux/man-pages/man1/watch.1.html)                     | 监控命令执行           | `watch`                   |
 | [wget](https://www.gnu.org/software/wget/)                                      | 文件下载工具           | `wget`                    |
 | [Graphviz](https://graphviz.org/)                                               | 图形可视化软件         | `graphviz`                |
 | [tmpwatch](https://linux.die.net/man/8/tmpwatch)                                | 临时文件清理工具       | `tmpwatch`                |
-| [jq](https://stedolan.github.io/jq/)                                            | JSON 处理工具          | `jq`                      |
 | [yq](https://github.com/mikefarah/yq)                                           | YAML 处理工具          | `yq`                      |
 | [tmux](https://github.com/tmux/tmux)                                            | 终端复用器             | `tmux`                    |
-| [Go](https://golang.org/)                                                       | 编程语言               | `go`                      |
 | [tree](https://linux.die.net/man/1/tree)                                        | 目录树显示工具         | `tree`                    |
 | [expect](https://linux.die.net/man/1/expect)                                    | 自动化交互工具         | `expect`                  |
 | [zsh](https://www.zsh.org/)                                                     | Shell 解释器           | `zsh`                     |
-| [OpenJDK](https://openjdk.org/)                                                 | Java 开发工具包        | `openjdk`                 |
-| [Colima](https://github.com/abiosoft/colima)                                    | Docker 容器运行时      | `colima`                  |
 | [Docker](https://www.docker.com/)                                               | 容器化平台             | `docker`                  |
 | [Docker Compose](https://docs.docker.com/compose/)                              | 容器编排工具           | `docker-compose`          |
 | [GNU sed](https://www.gnu.org/software/sed/)                                    | 流编辑器               | `gnu-sed`                 |
-| [pyenv](https://github.com/pyenv/pyenv)                                         | Python 版本管理工具    | `pyenv`                   |
 
 如果上述软件不能满足需要，并且还想用 homebrew 安装，可以在下列两个数组中继续添加：
 
