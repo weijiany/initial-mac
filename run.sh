@@ -25,23 +25,16 @@ else
     myEcho '--->homebrew installed' ${green}
 fi
 
-# create virtual env for python
-myEcho '====check venv is already exist' ${yello}
-if [ ! -d venv ]; then
-    python3 -m venv .venv
+# install ansible via Homebrew
+myEcho '====check ansible is installed' ${yello}
+if ! brew list ansible &>/dev/null; then
+    myEcho '--->install ansible' ${green}
+    brew install ansible
 else
-    myEcho '--->venv exist' ${green}
+    myEcho '--->ansible already installed' ${green}
 fi
-
-# activate virtual env
-source .venv/bin/activate
-
-# install python dependency
-myEcho '====install python dependency====' ${yello}
-pip3 install poetry
-poetry install
 
 # run ansible-playbook
 myEcho '====run ansible playbook' ${yello}
-ansible-playbook main.yml -i inventory/local --extra-vars "${SUDO_PASSWORD}"
+ansible-playbook main.yml -i inventory/local --extra-vars "ansible_become_password=${SUDO_PASSWORD}"
 myEcho '====install successfully' ${green}
