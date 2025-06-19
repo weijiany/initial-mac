@@ -1,0 +1,37 @@
+---
+# tasks file for proto
+- name: Check if proto is installed
+  ansible.builtin.command: proto --version
+  register: proto_check
+  ignore_errors: true
+  changed_when: false
+
+- name: Install proto if not installed
+  ansible.builtin.shell: bash <(curl -fsSL https://moonrepo.dev/install/proto.sh)
+  when: proto_check.rc != 0
+  notify: reload shell
+
+- name: Wait for proto to be available
+  ansible.builtin.wait_for:
+    path: "{{ ansible_env.HOME }}/.proto/bin/proto"
+    timeout: 30
+  when: proto_check.rc != 0
+
+- name: Create proto home directory
+  ansible.builtin.file:
+    path: "{{ proto_home }}"
+    state: directory
+    mode: '0755'
+
+- name: Create .prototools file
+  ansible.builtin.template:
+    src: prototools-template.j2
+    dest: "{{ proto_home }}/.prototools"
+    mode: '0644'
+  notify: reload shell
+
+- name: Install tools via proto using .prototools file
+  ansible.builtin.shell: |
+    cd {{ proto_home }}
+    proto install
+  notify: reload shell

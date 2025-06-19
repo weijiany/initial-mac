@@ -1,0 +1,9 @@
+#SPDX-License-Identifier: MIT-0
+---
+# defaults file for proto
+
+# Proto installation URL
+proto_install_url: "https://moonrepo.dev/install/proto.sh"
+
+# Proto home directory
+proto_home: "{{ ansible_env.HOME }}/.proto"

@@ -1,0 +1,6 @@
+# Proto tools configuration
+# This file defines the tools and their versions to be installed via proto
+
+{% for tool in proto_tools %}
+{{ tool.name }} = "{{ tool.version }}"
+{% endfor %}

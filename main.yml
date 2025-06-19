@@ -5,3 +5,4 @@
     - role: oh_my_zsh
     - role: git
     - role: tmux
+    - role: proto

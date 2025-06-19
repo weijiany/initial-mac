@@ -8,6 +8,8 @@
 - 安装 Oh My Zsh 并配置主题
 - 配置 Git
 - 安装和配置 Tmux
+- 安装 Proto 工具管理器
+- 通过 Proto 安装 AWS CLI
 
 ## 系统要求
 
@@ -79,7 +81,8 @@ initial-mac/
     ├── homebrew/       # Homebrew 配置
     ├── oh_my_zsh/      # Oh My Zsh 配置
     ├── git/            # Git 配置
-    └── tmux/           # Tmux 配置
+    ├── tmux/           # Tmux 配置
+    └── proto/          # Proto 工具管理器配置
 ```
 
 # initial mac
@@ -121,20 +124,42 @@ initial-mac/
 | 工具                                                                            | 描述                   | Homebrew 包名             |
 | ------------------------------------------------------------------------------- | ---------------------- | ------------------------- |
 | [autojump](https://github.com/wting/autojump)                                   | 命令行强大的跳转工具   | `autojump`                |
+| [kubectl](https://github.com/kubernetes/kubectl)                                | Kubernetes 命令行工具  | `kubectl`                 |
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)         | Oh My Zsh 自动提示插件 | `zsh-autosuggestions`     |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Oh My Zsh 语法高亮工具 | `zsh-syntax-highlighting` |
 | [watch](https://man7.org/linux/man-pages/man1/watch.1.html)                     | 监控命令执行           | `watch`                   |
 | [wget](https://www.gnu.org/software/wget/)                                      | 文件下载工具           | `wget`                    |
 | [Graphviz](https://graphviz.org/)                                               | 图形可视化软件         | `graphviz`                |
 | [tmpwatch](https://linux.die.net/man/8/tmpwatch)                                | 临时文件清理工具       | `tmpwatch`                |
+| [jq](https://stedolan.github.io/jq/)                                            | JSON 处理工具          | `jq`                      |
 | [yq](https://github.com/mikefarah/yq)                                           | YAML 处理工具          | `yq`                      |
 | [tmux](https://github.com/tmux/tmux)                                            | 终端复用器             | `tmux`                    |
+| [Go](https://golang.org/)                                                       | 编程语言               | `go`                      |
 | [tree](https://linux.die.net/man/1/tree)                                        | 目录树显示工具         | `tree`                    |
 | [expect](https://linux.die.net/man/1/expect)                                    | 自动化交互工具         | `expect`                  |
 | [zsh](https://www.zsh.org/)                                                     | Shell 解释器           | `zsh`                     |
 | [Docker](https://www.docker.com/)                                               | 容器化平台             | `docker`                  |
 | [Docker Compose](https://docs.docker.com/compose/)                              | 容器编排工具           | `docker-compose`          |
 | [GNU sed](https://www.gnu.org/software/sed/)                                    | 流编辑器               | `gnu-sed`                 |
+
+### Proto 工具
+
+| 工具                                                                 | 描述                     | 版本      |
+| -------------------------------------------------------------------- | ------------------------ | --------- |
+| [AWS CLI](https://aws.amazon.com/cli/)                              | AWS 命令行工具           | `2.24.20` |
+| [Go](https://golang.org/)                                            | Go 编程语言              | `1.24.1`  |
+| [Helm](https://helm.sh/)                                             | Kubernetes 包管理器      | `3.17.1`  |
+| [Helmfile](https://github.com/helmfile/helmfile)                     | Helm 声明式部署工具      | `1.0.0`   |
+| [jq](https://stedolan.github.io/jq/)                                 | JSON 处理工具            | `1.7.1`   |
+| [kubectl](https://kubernetes.io/docs/reference/kubectl/)             | Kubernetes 命令行工具    | `1.32.2`  |
+| [Node.js](https://nodejs.org/)                                       | JavaScript 运行时        | `22.11.0` |
+| [Proto](https://moonrepo.dev/proto)                                  | 工具管理器               | `0.49.5`  |
+| [Pulumi](https://www.pulumi.com/)                                    | 基础设施即代码工具       | `3.175.0` |
+| [Python](https://www.python.org/)                                    | Python 编程语言          | `3.10.11` |
+| [SOPS](https://github.com/mozilla/sops)                              | 密钥管理工具             | `3.10.2`  |
+| [Terraform](https://www.terraform.io/)                               | 基础设施即代码工具       | `1.12.1`  |
+| [Deno](https://deno.land/)                                           | JavaScript/TypeScript 运行时 | `2.3.6` |
+| [Dive](https://github.com/wagoodman/dive)                            | Docker 镜像分析工具      | `0.13.1`  |
 
 如果上述软件不能满足需要，并且还想用 homebrew 安装，可以在下列两个数组中继续添加：
 
