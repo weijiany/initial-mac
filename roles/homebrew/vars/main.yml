@@ -33,6 +33,7 @@ cli_list:
   - docker
   - docker-compose
   - gnu-sed
+  - docker-credential-helper-ecr
 
 # the value should pass from --extra-vars
 sudo_password: ''
