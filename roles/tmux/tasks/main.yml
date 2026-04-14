@@ -17,6 +17,7 @@
 
 - name: source tmux config
   ansible.builtin.command: 'tmux source {{ ansible_env.HOME }}/.tmux.conf'
+  ignore_errors: true
 
 - name: install tmux plugins
   ansible.builtin.command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/scripts/install_plugins.sh'

@@ -9,7 +9,6 @@
 - name: Install proto if not installed
   ansible.builtin.shell: bash <(curl -fsSL https://moonrepo.dev/install/proto.sh)
   when: proto_check.rc != 0
-  notify: reload shell
 
 - name: Wait for proto to be available
   ansible.builtin.wait_for:
@@ -28,10 +27,11 @@
     src: prototools-template.j2
     dest: "{{ proto_home }}/.prototools"
     mode: '0644'
-  notify: reload shell
 
 - name: Install tools via proto using .prototools file
   ansible.builtin.shell: |
     cd {{ proto_home }}
-    proto install
-  notify: reload shell
+    {{ proto_home }}/bin/proto install
+  environment:
+    PROTO_HOME: "{{ proto_home }}"
+    PATH: "{{ proto_home }}/shims:{{ proto_home }}/bin:{{ ansible_env.PATH }}"

@@ -1,4 +1,4 @@
-# /bin/bash
+#!/bin/bash
 
 green='32m'
 yello='33m'

@@ -1,5 +1,11 @@
 ---
+- name: 'check {{ directory }} exists'
+  ansible.builtin.stat:
+    path: '{{ directory }}'
+  register: dir_stat
+
 - name: 'change remote {{ remote.name }} url of {{ directory }}'
   ansible.builtin.shell: |
     cd "{{ directory }}"
     git remote set-url "{{ remote.name }}" "{{ remote.url }}"
+  when: dir_stat.stat.exists
