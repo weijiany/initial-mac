@@ -8,7 +8,7 @@
 
 - name: support escape symbol
   community.general.git_config:
-    name: core.paper
+    name: core.pager
     scope: global
     value: "less -r"
 
