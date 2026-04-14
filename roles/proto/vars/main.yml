@@ -19,7 +19,7 @@ proto_tools:
   - name: node
     version: "22.11.0"
   - name: proto
-    version: "0.49.5"
+    version: "0.56.1"
   - name: pulumi
     version: "asdf:3.175.0"
   - name: python

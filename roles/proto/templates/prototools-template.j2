@@ -2,5 +2,9 @@
 # This file defines the tools and their versions to be installed via proto
 
 {% for tool in proto_tools %}
+{% if ':' in tool.version %}
+"{{ tool.version.split(':')[0] }}:{{ tool.name }}" = "{{ tool.version.split(':')[1] }}"
+{% else %}
 {{ tool.name }} = "{{ tool.version }}"
+{% endif %}
 {% endfor %}
