@@ -85,19 +85,7 @@ initial-mac/
     └── proto/          # Proto 工具管理器配置
 ```
 
-# initial mac
-
-该代码库使用 ansible homebrew 为一个全新的 mac 安装以及配置一个开发常用所需要的软件包和配置。
-
-怎么运行：
-
-```
-./run.sh '{you sudo password}'
-```
-
-在安装 cask 的时候，有些软件需要 sudo 的密码。
-
-暂时安装了：
+## 安装的软件
 
 ### Cask 软件
 
@@ -124,17 +112,14 @@ initial-mac/
 | 工具                                                                                        | 描述                   | Homebrew 包名                  |
 | ------------------------------------------------------------------------------------------- | ---------------------- | ------------------------------ |
 | [autojump](https://github.com/wting/autojump)                                               | 命令行强大的跳转工具   | `autojump`                     |
-| [kubectl](https://github.com/kubernetes/kubectl)                                            | Kubernetes 命令行工具  | `kubectl`                      |
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                     | Oh My Zsh 自动提示插件 | `zsh-autosuggestions`          |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)             | Oh My Zsh 语法高亮工具 | `zsh-syntax-highlighting`      |
 | [watch](https://man7.org/linux/man-pages/man1/watch.1.html)                                 | 监控命令执行           | `watch`                        |
 | [wget](https://www.gnu.org/software/wget/)                                                  | 文件下载工具           | `wget`                         |
 | [Graphviz](https://graphviz.org/)                                                           | 图形可视化软件         | `graphviz`                     |
 | [tmpwatch](https://linux.die.net/man/8/tmpwatch)                                            | 临时文件清理工具       | `tmpwatch`                     |
-| [jq](https://stedolan.github.io/jq/)                                                        | JSON 处理工具          | `jq`                           |
 | [yq](https://github.com/mikefarah/yq)                                                       | YAML 处理工具          | `yq`                           |
 | [tmux](https://github.com/tmux/tmux)                                                        | 终端复用器             | `tmux`                         |
-| [Go](https://golang.org/)                                                                   | 编程语言               | `go`                           |
 | [tree](https://linux.die.net/man/1/tree)                                                    | 目录树显示工具         | `tree`                         |
 | [expect](https://linux.die.net/man/1/expect)                                                | 自动化交互工具         | `expect`                       |
 | [zsh](https://www.zsh.org/)                                                                 | Shell 解释器           | `zsh`                          |
@@ -175,11 +160,10 @@ initial-mac/
 | [Deno](https://deno.land/)                               | JavaScript/TypeScript 运行时 | `2.3.6`   |
 | [Dive](https://github.com/wagoodman/dive)                | Docker 镜像分析工具          | `0.13.1`  |
 
-如果上述软件不能满足需要，并且还想用 homebrew 安装，可以在下列两个数组中继续添加：
+## 自定义
 
-- cask: roles/homebrew/vars/main.yml > cask_list
-- cli: roles/homebrew/vars/main.yml > cli_list
+如果上述软件不能满足需要，可以在下列位置继续添加：
 
-### git
-
-配置 git alias.l = "log --graph --date=format:'%Y-%m-%d' --pretty=format:'%C(cyan)%h%Creset %Creset%C(auto)%d %s %C(black bold)(%ad) %C(bold blue)<%an>'"
+- Homebrew Cask: `roles/homebrew/vars/main.yml` > `cask_list`
+- Homebrew CLI: `roles/homebrew/vars/main.yml` > `cli_list`
+- Proto 工具: `roles/proto/vars/main.yml` > `proto_tools`
