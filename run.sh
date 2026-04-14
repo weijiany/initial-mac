@@ -5,7 +5,7 @@ yello='33m'
 red='31m'
 
 function myEcho() {
-   echo "\033[;${2}${1}\033[0m"
+   printf "\033[;%s%s\033[0m\n" "${2}" "${1}"
 }
 
 # check SUDO_PASSWORD variable is passed
@@ -21,9 +21,15 @@ brew --version
 if [ ${?} -ne 0 ]; then
     myEcho '--->install homebrew' ${green}
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-    myEcho '--->homebrew installed' ${green}
 fi
+
+# ensure brew is in PATH (Apple Silicon installs to /opt/homebrew)
+if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+myEcho '--->homebrew ready' ${green}
 
 # install ansible via Homebrew
 myEcho '====check ansible is installed' ${yello}
